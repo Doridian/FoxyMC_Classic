@@ -71,7 +71,7 @@ namespace FoxyMC
 			// default information to send
 			string postVars = staticVars;
 
-			string url = "https://mc.foxba.se/heartbeat.jsp";
+            string url = "http://minecraft.net/heartbeat.jsp";
 			try
 			{
 				int hidden = 0;
@@ -79,6 +79,9 @@ namespace FoxyMC
 				switch (type)
 				{
                     case Beat.Dori:
+                        url = "http://mc.foxba.se/heartbeat.jsp";
+                        postVars += "&salt=" + Server.salt;
+                        goto default;
                     case Beat.Vanilla:
 						postVars += "&salt=" + Server.salt;
 						goto default;
@@ -92,6 +95,7 @@ namespace FoxyMC
                 //request.ServicePoint.BindIPEndPointDelegate = Server.BindIPEndPointCallback;
 				request.Method = "POST";
 				request.ContentType = "application/x-www-form-urlencoded";
+                request.Proxy = null;
 				request.CachePolicy = new System.Net.Cache.RequestCachePolicy(System.Net.Cache.RequestCacheLevel.NoCacheNoStore);
 				byte[] formData = Encoding.ASCII.GetBytes(postVars);
 				request.ContentLength = formData.Length;
@@ -121,7 +125,7 @@ namespace FoxyMC
                         {
                             string line = responseReader.ReadLine();
 
-                            hash = line.Substring(line.LastIndexOf('=') + 1);
+                            hash = line.Substring(line.LastIndexOf('/') + 1);
                             serverURL = line;
 
                             Server.s.UpdateUrl(serverURL);
@@ -131,7 +135,7 @@ namespace FoxyMC
                         {
                             string line = responseReader.ReadLine();
 
-                            hash = line.Substring(line.LastIndexOf('=') + 1);
+                            //hash = line.Substring(line.LastIndexOf('=') + 1);
                             serverURL = line;
 
                             Server.s.UpdateUrl(serverURL);
