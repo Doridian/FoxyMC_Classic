@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxyMC", "FoxyMC\FoxyMC.csproj", "{A59E3BC3-0D09-4F86-95BE-A3E22C7381F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxyMC CLI", "FoxyMC.CLI\FoxyMC CLI.csproj", "{60148B0C-E0CC-4F2D-92AF-784A167FD460}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A59E3BC3-0D09-4F86-95BE-A3E22C7381F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59E3BC3-0D09-4F86-95BE-A3E22C7381F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59E3BC3-0D09-4F86-95BE-A3E22C7381F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59E3BC3-0D09-4F86-95BE-A3E22C7381F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60148B0C-E0CC-4F2D-92AF-784A167FD460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60148B0C-E0CC-4F2D-92AF-784A167FD460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60148B0C-E0CC-4F2D-92AF-784A167FD460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60148B0C-E0CC-4F2D-92AF-784A167FD460}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
